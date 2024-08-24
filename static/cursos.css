@@ -1,0 +1,10 @@
+footer {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

@@ -1,0 +1,26 @@
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: initial;
+    padding: 2rem;
+    background-color: darkgray;
+}
+
+.box{
+    padding: 1rem;
+    width: 50em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.card{
+    width: 80%;
+    padding: 1rem;
+    display: flex;
+}

@@ -1,0 +1,51 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  } */
+
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url("../static/images/fundo.jpg");
+}
+
+.carousel item {
+    height: 93vh;
+    width: 100vh;
+}
+
+.carousel-item {
+    height: 93vh;
+    width: 100vh;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100vw;
+}
+
+.carousel-caption h5,
+p {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.589);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
