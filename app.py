@@ -1,27 +1,34 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from lista import candidatos
+from usuario import Usuario,usuarios
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def landingpage():  # put application's code here
+def landingpage(): 
     return render_template("landingpage.html")
 
 @app.route('/cursos')
-def cursos():  # put application's code here
+def cursos(): 
     return render_template("cursos.html")
 
 @app.route('/formulario')
-def formulario():  # put application's code here
-    return render_template("formulario.html")
+def formulario():  
+    return render_template("formulario.html", usuarios=usuarios)
 
-@app.route('/teste')
-def teste():  # put application's code here
-    lista = ['Rodrigo',
-             'Gustavo', 'Enzo', 'Guilherme']
-    #return render_template("teste.html", jogos="Jogos", game=game)
-    return render_template("teste.html", lista=candidatos)
+@app.route('/cadastrar', methods=['POST'])
+def cadastrar():
+    nome = request.form['nome']
+    email = request.form['email']
+    senha = request.form['senha']
+    usuario = Usuario(nome, email, senha)
+    usuarios.append(usuario)
+    return redirect('/formulario')
+
+@app.route('/professores')
+def professores():  
+    return render_template("professores.html", lista=candidatos)
 
 if __name__ == '__main__':
     app.run(debug=True)
